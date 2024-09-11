@@ -12,4 +12,4 @@ export const ROUTES = [
 		path: '/about-us',
 		component: AboutUs,
 	},
-]; 
+];
