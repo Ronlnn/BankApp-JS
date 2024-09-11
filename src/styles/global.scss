@@ -1,6 +1,6 @@
+// @import './variables';
 @import './variables';
 @import './reset';
-
 input,
 button,
 body {
@@ -36,4 +36,4 @@ a {
 	}
 }
 
-@import './keyframes';
+@import 'keyframes';
