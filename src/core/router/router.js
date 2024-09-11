@@ -3,7 +3,7 @@ import { ROUTES } from './routes_data';
 import { Layout } from '@/components/layout/layout_component';
 
 export class Router {
-	layoutInstance = null;
+	layout = null;
 	constructor() {
 		this.routes = ROUTES;
 		this.currentRoute = null;
@@ -27,12 +27,13 @@ export class Router {
 	render() {
 		const component = new this.currentRoute.component();
 
-		if (!this.layoutInstance) {
-			this.layoutInstance = new Layout({
+		if (!this.layout) {
+			this.layout = new Layout({
 				router: this,
 				children: component.render(),
 			});
-			document.getElementById('app').innerHTML = this.Layout;
+			document.getElementById('app').innerHTML =
+				this.layout.render();
 		} else {
 			document.querySelector('main').innerHTML = component.render();
 		}

@@ -81,6 +81,7 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env',  '@babel/preset-react'],
+						"sourceMaps": true,
 					},
 				},
 			},
@@ -141,6 +142,7 @@ module.exports = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['@babel/preset-env',  '@babel/preset-react'],
+						"sourceMaps": true,
 					},
 				},
 			},

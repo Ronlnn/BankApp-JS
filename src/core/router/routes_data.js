@@ -1,6 +1,7 @@
 import { AboutUs } from '@/components/screens/about-us/about_us_component';
 import { Auth } from '@/components/screens/auth/auth_component';
 import { Home } from '@/components/screens/home/home_component';
+import { NotFound } from '@/components/screens/not-found/not-found_component';
 
 export const ROUTES = [
 	{

@@ -1,5 +1,5 @@
 export class NotFound {
-	render(){
-		return <p>NotFound</p>
+	render() {
+		return <p>NotFound</p>;
 	}
 }

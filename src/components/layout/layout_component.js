@@ -1,17 +1,18 @@
 export class Layout {
 	//Принимаем наши чилдрены))
 	constructor({ router, children }) {
-		this.children = children;
 		this.router = router;
+		this.children = children;
 	}
 
 	render() {
-		const headerHTMl = <header>Header</header>;
+		const headerHTMl = '<header>Header</header>'
 
 		return `
-		${headerHTML}
+		${headerHTMl}
 		<main>
 		${this.children}
-		</main>	`;
+		</main>	 
+		`;
 	}
 }
