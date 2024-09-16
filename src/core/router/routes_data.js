@@ -8,7 +8,7 @@ export const ROUTES = [
 		path: '/',
 		component: Home,
 	},
-	{ path: 'auth', component: Auth },
+	{ path: '/auth', component: Auth },
 	{
 		path: '/about-us',
 		component: AboutUs,

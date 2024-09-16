@@ -6,7 +6,7 @@ export class Layout {
 	}
 
 	render() {
-		const headerHTMl = '<header>Header</header>'
+		const headerHTMl = '<header>Header</header>';
 
 		return `
 		${headerHTMl}
