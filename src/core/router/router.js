@@ -56,5 +56,5 @@ export class Router {
         } else {
             document.querySelector('main').innerHTML = component.render();
         }
-    }
+    } 
 }
