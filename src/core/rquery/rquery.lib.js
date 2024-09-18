@@ -2,5 +2,6 @@ class RQuery {
 	find(){
 		//querryselector
 	}
-//$R(element).find(')
+	
+//функция которая будет вызывать     $R(element).find(')
 }

@@ -9,6 +9,7 @@ export class Home extends BaseScreen {
 	}
 	render() {
 		const element = RenderService.htmlToElement(template, [], styles);
+		debugger
 		return element.outerHTML;
 	}
 }

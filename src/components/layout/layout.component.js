@@ -14,7 +14,7 @@ export class Layout {
 		</nav>
 		</header>`;
 
-        return `S
+        return `
 		${headerHTMl}
 		<main>
 		${this.children}
