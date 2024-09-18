@@ -20,7 +20,16 @@ class RenderService {
     replaceComponentTags(parentElement, components) {
         const componentTagPattern = /^component-/; // Регулярное выражение
         const allElements = parentElement.getElementsByTagName('*');
-    }
+		
+		for(const element of allElements){
+			const elementTagName  = element.tagName.toLowerCase()
+			if(componentTagPattern.test(elementTagName)){
+				const componentName = elementTagName
+					.replace(componentTagPattern, '')
+					.replace(/-/g, '' )
+
+			}
+		}
 }
 
 export default new RenderService();
