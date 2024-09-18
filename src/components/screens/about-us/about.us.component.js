@@ -1,4 +1,4 @@
-import {BaseScreen} from '@/core/component/base_screen_component.js'
+import {BaseScreen} from '@/core/component/base.screen.component.js'
 export class AboutUs extends BaseScreen {
 	constructor(){
 		super({title: 'About Us'})

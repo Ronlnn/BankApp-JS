@@ -1,4 +1,4 @@
-import { getTitle } from '../../config/seo_config';
+import { getTitle } from '../../config/seo.config';
 
 export class BaseScreen {
 	/**
