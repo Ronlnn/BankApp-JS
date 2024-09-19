@@ -80,7 +80,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
+            presets: ['@babel/preset-env'],
             sourceMaps: true,
           },
         },
@@ -101,6 +101,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
+              
               sourceMap: isDev,
             },
           },

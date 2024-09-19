@@ -1,5 +1,5 @@
-import ChildComponent from '@/core/component/child.component.js'
-import RenderService from '@/core/services/render.service.js';
+import {ChildComponent} from '@/core/component/child.component.js'
+import {RenderService} from '@/core/services/render.service.js';
 import styles from './<FTName>.module.scss'
 import template from './<FTName>.template.html'
 
