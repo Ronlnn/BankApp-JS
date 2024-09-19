@@ -44,7 +44,6 @@ class RenderService {
 						componentName
 					);
 				});
-
 				if (foundComponent) {
 					const componentContent =
 						foundComponent instanceof ChildComponent
