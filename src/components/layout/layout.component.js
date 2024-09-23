@@ -1,20 +1,27 @@
-import RenderService from '@/core/services/render.service.js';
+import renderService from '@/core/services/render.service.js';
 import styles from './layout.module.scss';
 import template from './layout.template.html';
-import { $R } from '@/core/rquery/rquery.lib';
-import { Header } from './header/header.component';
+import { $R } from '@/core/rquery/rquery.lib.js';
+import { Header } from './header/header.component.js';
+import { ChildComponent } from '@/core/component/child.component.js';
 
-export class Layout {
+export class Layout extends ChildComponent {
 	//Принимаем наши чилдрены))
 	constructor({ router, children }) {
+		super();
 		this.router = router;
 		this.children = children;
 	}
 
 	render() {
-		this.element = RenderService.htmlToElement(template, [], styles);
+		this.element = renderService.htmlToElement(template, [], styles);
 		const mainElement = $R(this.element).find('main');
-		mainElement.before(new Header().render());
-		return this.element.outerHTML;
+		const contentContainer = $R(this.element).find('#content');
+		contentContainer.append(this.children);
+
+		mainElement
+			.before(new Header().render())
+			.append(contentContainer.element);
+		return this.element;
 	}
 }

@@ -1,4 +1,4 @@
-import { ChildComponent } from '../component/child.component';
+// import { ChildComponent } from '../component/child.component';
 
 class RenderService {
 	/**
@@ -68,8 +68,8 @@ class RenderService {
 		const applyStyles = (element) => {
 			for (const [key, value] of Object.entries(moduleStyles)) {
 				if (element.classList.contains(key)) {
-					element.classList.add(value);
 					element.classList.remove(key);
+					element.classList.add(value);
 				}
 			}
 		};

@@ -37,9 +37,9 @@ module.exports = {
     filename: isDev ? '[name].js' : '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'public/[name].[contenthash][ext][query]',
-  },
+  },  
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js'],
     alias: {
       '@': path.resolve(__dirname, 'src/'),
     },
@@ -81,7 +81,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            sourceMaps: true,
+            // sourceMaps: true,
           },
         },
       },
@@ -92,16 +92,16 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: {
-                localIdentName: '[local]_[hash:base64:7]',
-              },
-              sourceMap: isDev,
+              modules: 
+                // localIdentName: '[local]_[hash:base64:7]',
+                false
+             
+              // sourceMap: isDev,
             },
           },
           {
             loader: 'sass-loader',
             options: {
-              
               sourceMap: isDev,
             },
           },
@@ -115,7 +115,7 @@ module.exports = {
           {
             loader: 'sass-loader',
             options: {
-              sourceMap: isDev,
+              sourceMap: true, 
             },
           },
         ],
@@ -128,7 +128,7 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: isDev,
+              sourceMap: true,
             },
           },
         ],
